@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CASH SOLUCIÓN - Préstamos Personales</title>
+    
+    <!-- Enlace a CSS -->
+
+    <link rel="stylesheet" href="styles.css">
+    
+    <!-- Enlace a cloudeflare para la carpeta de iconos -->
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+<!-- Encabezado y Navegación -->
+
+<header>
+
+    <!-- Logotipo oficial CashSolución -->
+
+    <a href="index.html#inicio" class="logo">
+        <img src="logo.PNG" alt="Cash Solución Logo">
+    </a>
+
+    <!-- Menú con enlaces de navegación -->
+
+    <nav>
+        <ul>
+            <li><a href="#inicio">Inicio</a></li>
+            <li><a href="#prestamos">Préstamos</a></li>
+            <li><a href="#calculadora">Calculadora</a></li>
+            <li><a href="#faq">Preguntas Frecuentes</a></li>
+            <li><a href="#contacto">Contacto</a></li>
+
+            <!-- Enlace a la página Sobre Nosotros -->
+
+            <li><a href="nosotros.html">Sobre Nosotros</a></li>
+        </ul>
+    </nav>
+
+    <!-- Botón de Acción Principal Para Solicitar Préstamo -->
+
+    <a href="#registro" class="btn-header">Solicitar Préstamo</a>
+</header>
+
+<!-- Inicio -->
+
+<section id="inicio" class="hero">
+    <h1>El dinero que necesitas, cuando lo necesitas</h1>
+    <p>Préstamos personales rápidos, transparentes y diseñados a tu medida.</p>
+    
+    <div class="value-props">
+        <div class="prop-item"><i class="fa-solid fa-bolt"></i> Aprobación rápida</div>
+        <div class="prop-item"><i class="fa-solid fa-calendar-check"></i> Cuotas fijas quincenales</div>
+        <div class="prop-item"><i class="fa-solid fa-shield-halved"></i> Sin cargos ocultos</div>
+    </div>
+
+    <a href="#registro" class="btn-hero">Solicitar Préstamo Ahora</a>
+</section>
+
+<!-- Nuestros Préstamos -->
+
+<section id="prestamos" class="section-container">
+    <h2 class="section-title">Nuestros Préstamos</h2>
+    <div class="cards-grid">
+        <div class="card">
+            <i class="fa-solid fa-hand-holding-dollar card-icon"></i>
+            <h3>Préstamos Personales</h3>
+            <p>Soluciones financieras rápidas para resolver imprevistos, consolidar deudas o realizar tus proyectos.</p>
+        </div>
+        <div class="card">
+            <i class="fa-solid fa-clock-rotate-left card-icon"></i>
+            <h3>Plazos Flexibles</h3>
+            <p>Elige el plan de cuotas quincenales que mejor se ajuste a tus ingresos y capacidad de pago.</p>
+        </div>
+        <div class="card">
+            <i class="fa-solid fa-user-check card-icon"></i>
+            <h3>Sin Complicaciones</h3>
+            <p>Evaluación ágil con requisitos mínimos para que dispongas de tu dinero en el menor tiempo posible.</p>
+        </div>
+    </div>
+</section>
+
+<!-- Calculadora de Préstamos -->
+
+<section id="calculadora" class="section-container">
+    <h2 class="section-title">Calcula tu Préstamo</h2>
+    <div class="calculator-card">
+        <div class="calc-controls">
+            <div class="control-group">
+                <label>Monto Solicitado: <span id="monto-val" class="slider-value">RD$10,000</span></label>
+                <input type="range" id="monto" min="2000" max="50000" step="1000" value="10000">
+            </div>
+            <div class="control-group">
+                <label>Cuotas Quincenales: <span id="cuotas-val" class="slider-value">10 Quincenas</span></label>
+                <input type="range" id="cuotas" min="2" max="24" step="2" value="10">
+            </div>
+        </div>
+
+        <div class="calc-summary">
+            <div>
+                <div class="summary-item">
+                    <span>Interés quincenal (10%):</span>
+                    <span id="interes-val" style="font-weight:600;">RD$1,000</span>
+                </div>
+                <div class="summary-item">
+                    <span>Abono estimado a capital:</span>
+                    <span id="capital-val" style="font-weight:600;">RD$1,000</span>
+                </div>
+            </div>
+            <div class="summary-total">
+                <div class="summary-item" style="margin:0;">
+                    <span>Cuota Estimada Quincenal:</span>
+                    <span id="total-cuota">RD$2,000</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Formulario de Solicitud de Préstamo -->
+
+<section id="registro" class="section-container">
+    <h2 class="section-title">Solicita tu Préstamo en 2 Pasos</h2>
+    <div class="form-card">
+        <form id="solicitud-form">
+            <div class="form-group">
+                <label for="nombre">Nombre Completo</label>
+                <input type="text" id="nombre" placeholder="Ej. Juan Pérez" required>
+            </div>
+            <div class="form-group">
+                <label for="telefono">Teléfono / WhatsApp</label>
+                <input type="tel" id="telefono" placeholder="Ej. 809-000-0000" required>
+            </div>
+            <div class="form-group">
+                <label for="cedula">Número de Cédula</label>
+                <input type="text" id="cedula" placeholder="001-0000000-0" required>
+            </div>
+            <div class="form-group">
+                <label for="correo">Correo Electrónico</label>
+                <input type="email" id="correo" placeholder="correo@cashsolucion.com" required>
+            </div>
+            <button type="submit" class="btn-submit">Enviar Solicitud</button>
+        </form>
+    </div>
+</section>
+
+<!-- Preguntas Frecuentes -->
+
+<section id="faq" class="section-container">
+    <h2 class="section-title">Preguntas Frecuentes</h2>
+    <div class="faq-item">
+        <div class="faq-question"><i class="fa-solid fa-circle-question" style="color:#28B463;"></i> ¿Cuál es la tasa de interés?</div>
+        <div class="faq-answer">Manejamos una tasa del 20 % mensual, la cual se desglosa en pagos quincenales ajustados al 10 % por periodo.</div>
+    </div>
+    <div class="faq-item">
+        <div class="faq-question"><i class="fa-solid fa-circle-question" style="color:#28B463;"></i> ¿Qué requisitos necesito para aplicar?</div>
+        <div class="faq-answer">Solo necesitas tu cédula de identidad vigente, un número telefónico de contacto activo y completar el formulario inicial.</div>
+    </div>
+    <div class="faq-item">
+        <div class="faq-question"><i class="fa-solid fa-circle-question" style="color:#28B463;"></i> ¿Cómo realizan los desembolsos?</div>
+        <div class="faq-answer">Una vez aprobada tu solicitud, el dinero es transferido directamente a tu cuenta bancaria o entregado según los canales coordinados.</div>
+    </div>
+</section>
+
+<!-- Botón Flotante de WhatsApp -->
+
+<a href="https://wa.me/18090000000" class="whatsapp-float" target="_blank" aria-label="Contacto por WhatsApp">
+    <i class="fa-brands fa-whatsapp"></i>
+</a>
+
+<!-- Footer, Pie de Página, Contacto, Dirección, Horario -->
+
+<footer id="contacto">
+    <div class="footer-content">
+        <div class="footer-col">
+            <img src="logo.PNG" alt="Cash Solución" class="footer-logo">
+            <p>Tu aliado financiero confiable para préstamos personales rápidos y con condiciones transparentes.</p>
+        </div>
+        <div class="footer-col">
+            <h4>Contacto Directo</h4>
+            <ul>
+                <li><i class="fa-solid fa-phone"></i> Teléfono: (809) 000-0000</li>
+                <li><i class="fa-brands fa-whatsapp"></i> WhatsApp: (809) 000-0000</li>
+                <li><i class="fa-solid fa-envelope"></i> Correo: contacto@cashsolucion.com</li>
+            </ul>
+        </div>
+        <div class="footer-col">
+            <h4>Ubicación</h4>
+            <p><i class="fa-solid fa-location-dot"></i> Santo Domingo, República Dominicana</p>
+            <p>Horario: Lunes a Viernes 8:00 AM - 5:00 PM Sabado 9:00 AM - 1:00 PM</p>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>&copy; 2026 CASH SOLUCIÓN. Todos los derechos reservados. INFOTEP-DPWCJN 26-06. Luis Ramirez</p>
+    </div>
+</footer>
+
+<!-- Calculadora de Préstamo JS -->
+
+<script>
+    const montoInput = document.getElementById('monto');
+    const cuotasInput = document.getElementById('cuotas');
+    const montoVal = document.getElementById('monto-val');
+    const cuotasVal = document.getElementById('cuotas-val');
+    const interesVal = document.getElementById('interes-val');
+    const capitalVal = document.getElementById('capital-val');
+    const totalCuota = document.getElementById('total-cuota');
+
+    function actualizarCalculadora() {
+        const monto = parseFloat(montoInput.value);
+        const cuotas = parseInt(cuotasInput.value);
+
+        const interesQuincenal = monto * 0.10;
+        const abonoCapital = monto / cuotas;
+        const cuotaEstimada = interesQuincenal + abonoCapital;
+
+        montoVal.textContent = `RD$${monto.toLocaleString()}`;
+        cuotasVal.textContent = `${cuotas} Quincenas`;
+        interesVal.textContent = `RD$${Math.round(interesQuincenal).toLocaleString()}`;
+        capitalVal.textContent = `RD$${Math.round(abonoCapital).toLocaleString()}`;
+        totalCuota.textContent = `RD$${Math.round(cuotaEstimada).toLocaleString()}`;
+    }
+
+    montoInput.addEventListener('input', actualizarCalculadora);
+    cuotasInput.addEventListener('input', actualizarCalculadora);
+    actualizarCalculadora();
+</script>
+
+</body>
+</html>
